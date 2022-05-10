@@ -8,13 +8,12 @@
     tools:context=".FirstPageActivity">
 
 
-
-
     <ImageView
 
         android:id="@+id/carrexlogo"
         android:layout_width="172dp"
         android:layout_height="162dp"
+        android:contentDescription="Carrex Logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
