@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SplashScreenAndMore</string>
+    <string name="carrex_logo">Carrex Logo</string>
+    <string name="carrex">Carrex</string>
 </resources>
