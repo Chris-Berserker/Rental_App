@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreenAndMore">
         <activity
+            android:name=".BuyCar"
+            android:exported="true" />
+        <activity
             android:name=".SignupPage"
             android:exported="false" />
         <activity
