@@ -19,9 +19,6 @@
             android:name=".LoginPage"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
-        <activity
             android:name=".FirstPageActivity"
             android:exported="false" />
         <activity

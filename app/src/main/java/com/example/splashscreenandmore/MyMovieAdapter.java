@@ -41,6 +41,8 @@ public class MyMovieAdapter extends RecyclerView.Adapter<MyMovieAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, myMovieDataList.getMovieName(), Toast.LENGTH_SHORT).show();
+
+
             }
         });
     }
