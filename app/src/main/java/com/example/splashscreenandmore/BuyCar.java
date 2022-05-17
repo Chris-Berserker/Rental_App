@@ -18,12 +18,12 @@ public class BuyCar extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         MyCarData[] myMovieData = new MyCarData[]{
-                new MyCarData("Tesla","Electric", R.drawable.avenger),
-                new MyCarData("Nissan Qashqai","1500cc",R.drawable.venom),
-                new MyCarData("Ford Ranger","1800cc",R.drawable.jumanji),
-                new MyCarData("Suzuki","1000cc",R.drawable.good_deeds),
-                new MyCarData("Ford Focus","1600cc",R.drawable.hulk),
-                new MyCarData("Nissan 350z","2500cc",R.drawable.avatar),
+                new MyCarData("Tesla", "Rs 2,840,000","Electric", R.drawable.avenger),
+                new MyCarData("Nissan Qashqai","Rs 1,480,000" ,"1500cc",R.drawable.venom),
+                new MyCarData("Ford Ranger", "Rs 2,400,000","1800cc",R.drawable.jumanji),
+                new MyCarData("Suzuki", "Rs 500,000","1000cc",R.drawable.good_deeds),
+                new MyCarData("Ford Focus", "Rs 1,200,000","1600cc",R.drawable.hulk),
+                new MyCarData("Nissan 350z","Rs 1,950,000" ,"2500cc",R.drawable.avatar),
         };
 
         MyMovieAdapter myMovieAdapter = new MyMovieAdapter(myMovieData,BuyCar.this);
