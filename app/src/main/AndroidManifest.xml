@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreenAndMore">
         <activity
-            android:name=".Full_Details"
+            android:name="com.example.splashscreenandmore.Full_Details"
             android:exported="true" />
         <activity
             android:name=".BuyCar"

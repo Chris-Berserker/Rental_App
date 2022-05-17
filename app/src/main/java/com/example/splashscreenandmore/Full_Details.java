@@ -1,9 +1,12 @@
-package com.example.splashscreenandmore;
+package com.example.splashscreenandmore;;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.Handler;
+import android.os.Bundle;
+
+
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -18,7 +21,7 @@ public class Full_Details extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_full_details);
 
         imageSlider = findViewById(R.id.imageSlider);
 
