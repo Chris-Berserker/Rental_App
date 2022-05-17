@@ -18,7 +18,7 @@ public class BuyCar extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         MyCarData[] myMovieData = new MyCarData[]{
-                new MyCarData("Tesla", "Rs 2,840,000","Electric", R.drawable.avenger),
+                new MyCarData("Tesla","Rs 2,840,000","Electric", R.drawable.avenger),
                 new MyCarData("Nissan Qashqai","Rs 1,480,000" ,"1500cc",R.drawable.venom),
                 new MyCarData("Ford Ranger", "Rs 2,400,000","1800cc",R.drawable.jumanji),
                 new MyCarData("Suzuki", "Rs 500,000","1000cc",R.drawable.good_deeds),
