@@ -23,14 +23,14 @@
                 android:layout_width="151dp"
                 android:layout_height="156dp"
                 android:layout_margin="10dp"
-                android:contentDescription="Car Details"
+                android:contentDescription="@string/car_details"
                 android:src="@drawable/avatar" />
 
             <LinearLayout
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent">
 
                 <TextView
