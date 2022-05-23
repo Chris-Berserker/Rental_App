@@ -16,4 +16,8 @@
     <string name="like_text">Like</string>
     <string name="search_text">Search</string>
     <string name="shop_text">Shop</string>
+    <string name="home">Home</string>
+    <string name="like">Like</string>
+    <string name="search">Search</string>
+    <string name="shop">Shop</string>
 </resources>

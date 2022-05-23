@@ -25,6 +25,8 @@
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/login_tab_fragment.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/slider_item.xml" value="0.1" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/ic_sports_car_1_1s_200px.xml" value="0.1935" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/item_selector.xml" value="0.1665" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/round_corner.xml" value="0.1665" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/vie_bg.xml" value="0.1935" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_buy_car.xml" value="0.264" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_first_page.xml" value="0.25" />
@@ -32,6 +34,7 @@
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_login_page.xml" value="0.192481884057971" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/car_item_list.xml" value="0.264" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/menu/item_menu.xml" value="0.25" />
       </map>
     </option>
   </component>
