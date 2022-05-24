@@ -6,9 +6,11 @@ public class MyCarData {
     private String movieName;
     private String movieDate;
     private Integer movieImage;
+    private String listingPrice;
 
-    public MyCarData(String movieName, String movieDate, Integer movieImage) {
+    public MyCarData(String movieName, String listingPrice, String movieDate, Integer movieImage) {
         this.movieName = movieName;
+        this.listingPrice = listingPrice;
         this.movieDate = movieDate;
         this.movieImage = movieImage;
     }
@@ -20,6 +22,10 @@ public class MyCarData {
     public void setMovieName(String movieName) {
         this.movieName = movieName;
     }
+
+    public String getListingPrice(){return listingPrice;}
+
+    public void setListingPrice(String listingPrice){this.listingPrice = listingPrice;}
 
     public String getMovieDate() {
         return movieDate;

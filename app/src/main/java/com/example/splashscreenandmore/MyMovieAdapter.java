@@ -34,13 +34,17 @@ public class MyMovieAdapter extends RecyclerView.Adapter<MyMovieAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final MyCarData myMovieDataList = myMovieData[position];
         holder.textViewName.setText(myMovieDataList.getMovieName());
+        holder.textViewList.setText(myMovieDataList.getListingPrice());
         holder.textViewDate.setText(myMovieDataList.getMovieDate());
         holder.movieImage.setImageResource(myMovieDataList.getMovieImage());
 
+        //Display the name at the bottom as a confirmation
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, myMovieDataList.getMovieName(), Toast.LENGTH_SHORT).show();
+
+
             }
         });
     }
@@ -54,12 +58,14 @@ public class MyMovieAdapter extends RecyclerView.Adapter<MyMovieAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView movieImage;
         TextView textViewName;
+        TextView textViewList;
         TextView textViewDate;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             movieImage = itemView.findViewById(R.id.imageview);
             textViewName = itemView.findViewById(R.id.textName);
+            textViewList = itemView.findViewById(R.id.text);
             textViewDate = itemView.findViewById(R.id.textdate);
 
         }
