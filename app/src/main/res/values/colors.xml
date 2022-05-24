@@ -8,7 +8,7 @@
     <color name="grey">#D3D3D3</color>
     <color name="dodgerBlue">#1E90FF</color>
     <color name="midnightBlue">#191970</color>
-    <color name="LightBlue">#e6faff</color>
+    <color name="LightBlue">#b2d7e6</color>
     <!--Custom Colors-->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
@@ -17,4 +17,5 @@
     <color name="card_2">#F9E79F</color>
     <color name="card_3">#D7BDE2</color>
     <color name="card_4">#D2C3D8</color>
+    <color name="homeback">#68828a</color>
 </resources>
