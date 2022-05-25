@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Full_Details">
+    tools:context=".Full_Details"
+    android:background="@drawable/backgroundlogo"
+    >
 
 
     <androidx.cardview.widget.CardView
@@ -34,4 +36,66 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/CarName"
+        android:layout_width="365dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="236dp"
+        android:ems="10"
+        android:text="Nissan Quashqai"
+        android:textAlignment="center"
+        android:textColor="@color/midnightBlue"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descriptionTitle"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="316dp"
+        android:ems="10"
+        android:text="Description:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descriptionDetails"
+        android:layout_width="365dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="364dp"
+        android:ems="10"
+        android:text="The Nissan Qashqai is a compact crossover SUV (C-segment) developed and produced by the Japanese car manufacturer Nissan since 2006. The first generation of the vehicle was sold under the name Nissan Dualis in Japan and Australia, and Qashqai in other markets."
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="596dp"
+        android:backgroundTint="@color/lightBlue"
+        style= "@style/Widget.Material3.Button.IconButton"
+        app:icon="@drawable/ic_sports_car_1_1s_200px"
+        android:text="Book Now"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
 </androidx.constraintlayout.widget.ConstraintLayout>
