@@ -13,12 +13,6 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/SplashScreenAndMore/app/src/main/res/layout/activity_signup_page.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SplashScreenAndMore/app/src/main/res/layout/login_tab_fragment.xml" value="0.2" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SplashScreenAndMore/app/src/main/res/layout/signup_tab_fragment.xml" value="0.18" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_cloudy.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_damn1.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_simple_shiny.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_sports_car_1_1s_200px.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_buy_car.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_first_page.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_full_details.xml" value="0.1" />
@@ -33,13 +27,25 @@
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/login_tab_fragment.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/slider_item.xml" value="0.1" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/ic_sports_car_1_1s_200px.xml" value="0.1935" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/item_selector.xml" value="0.1665" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/round_corner.xml" value="0.1665" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/drawable/vie_bg.xml" value="0.1935" />
-        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_buy_car.xml" value="0.18" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout-v21/activity_buy_car.xml" value="0.25" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_buy_car.xml" value="0.264" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_first_page.xml" value="0.25" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_full_details.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_login.xml" value="0.192481884057971" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_login_page.xml" value="0.192481884057971" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/car_item_list.xml" value="0.16216216216216217" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/car_item_list.xml" value="0.264" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/fragment_first.xml" value="0.264" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/fragment_home.xml" value="0.136" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/fragment_like.xml" value="0.264" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/fragment_search.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/fragment_second.xml" value="0.13043478260869565" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/fragment_shop.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/slider_item.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/menu/item_menu.xml" value="0.25" />
       </map>
     </option>
   </component>
