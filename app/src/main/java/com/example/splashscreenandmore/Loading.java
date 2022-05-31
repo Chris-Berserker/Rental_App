@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class Loading extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
 
@@ -20,7 +22,9 @@ public class Loading extends AppCompatActivity {
                 Intent homeIntent = new Intent(Loading.this, BuyCar.class);
                 startActivity(homeIntent);
                 finish();
+                Animatoo.animateSlideDown(Loading.this);
             }
         }, SPLASH_TIME_OUT);
+
     }
     }
