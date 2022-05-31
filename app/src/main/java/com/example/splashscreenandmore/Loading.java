@@ -9,7 +9,7 @@ import android.os.Handler;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class Loading extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int SPLASH_TIME_OUT = 1400;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
