@@ -19,7 +19,7 @@ public class Loading extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent homeIntent = new Intent(Loading.this, BuyCar.class);
+                Intent homeIntent = new Intent(Loading.this, Dashboard.class);
                 startActivity(homeIntent);
                 finish();
                 Animatoo.animateSlideDown(Loading.this);
