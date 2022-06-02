@@ -1,21 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Full_Details"
-    android:background="@drawable/backgroundlogo"
+    android:background="@color/white"
     >
 
+    <TextView
+        android:id="@+id/title"
+        android:text="Land Rover"
+        android:textColor="@color/midnightBlue"
+        android:textAlignment="center"
+        android:fontFamily="@font/aclonica"
+        android:textSize="35sp"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="1.0"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:src="@drawable/speedometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="314dp"
+        android:text="600000 Km"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:src="@drawable/fuel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Petrol"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="314dp"
+        android:text="Petrol"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:src="@drawable/engine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="314dp"
+        android:text="1600 CC"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:src="@drawable/gearbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="314dp"
+        android:text="Auto"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.029"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Petrol"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:text="Options                                                     A/C                                                            ABS Brakes                                             Airbag                                                  Alloy Wheels                                            AUX
+              Audio Bluetooth Telephone Central                               Locking Cruise         Control Fog Lights                                                            Multifonction Steering Wheel                                Parking Sensor Power Mirrors Power Steering Power Windows Reverse Camera USB Audio"
+            android:textSize="25sp"
+            />
+    </ScrollView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,81 +170,52 @@
 
 
             <com.denzcoskun.imageslider.ImageSlider
+
+                android:id="@+id/imageSlider"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:iss_period="1000"
                 app:iss_auto_cycle="true"
-                app:iss_delay="1000"
                 app:iss_corner_radius="10"
+                app:iss_delay="1000"
+                app:iss_period="1000"
                 app:iss_title_background="@drawable/gradient"
-                android:id="@+id/imageSlider"
                 tools:ignore="MissingClass" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/CarName"
-        android:layout_width="329dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="232dp"
-        android:ems="10"
-        android:text="@string/quashqai_name"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="612dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Rs 1,000,000"
         android:textAlignment="center"
-        android:textColor="@color/midnightBlue"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/descriptionTitle"
-        android:layout_width="157dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
-        android:layout_marginBottom="9dp"
-        android:ems="10"
-        android:text="Description:"
-        android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/descriptionDetails"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/descriptionDetails"
-        android:layout_width="363dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:ems="10"
-        android:text="@string/Qashqai_description"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/dodgerBlue"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/button3"
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="596dp"
-        android:backgroundTint="@color/lightBlue"
+        android:backgroundTint="@color/midnightBlue"
         android:text="@string/book_now_Button"
-        android:textColor="#0277BD"
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:icon="@drawable/ic_sports_car_1_1s_200px"
+        app:icon="@drawable/reserv2"
+
         app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
