@@ -12,4 +12,5 @@
     <color name="midnightBlue">#191970</color>
     <color name="lightBlue">#69def5</color>
     <color name="DelightBlue">#d5f4e6</color>
+    <color name="Transparent">#00000000</color>
 </resources>
