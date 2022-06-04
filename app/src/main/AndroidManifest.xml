@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreenAndMore">
         <activity
-            android:name="com.example.splashscreenandmore.Full_Details"
+            android:name=".Dashboard"
+            android:exported="true"/>
+        <activity
+            android:name=".Loading"
+            android:exported="true" />
+        <activity
+            android:name=".Full_Details"
             android:exported="true" />
         <activity
             android:name=".BuyCar"
@@ -35,6 +41,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

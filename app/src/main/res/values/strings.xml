@@ -6,22 +6,12 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="car_details">Car Details</string>
     <string name="carrex_logo">Carrex Logo</string>
-    <!--NavBar Strings-->
-    <string name="home_text">Home</string>
-    <string name="like_text">Like</string>
-    <string name="search_text">Search</string>
-    <string name="shop_text">Shop</string>
-    <string name="home">Home</string>
-    <string name="like">Like</string>
-    <string name="search">Search</string>
-    <string name="shop">Shop</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="carrex_logo">Carrex Logo</string>
-    <string name="carrex">Carrex</string>
-
+    <string name="Qashqai_description">The Nissan Qashqai is a compact crossover SUV (C-segment) developed and produced by the Japanese car manufacturer Nissan since 2006. The first generation of the vehicle was sold under the name Nissan Dualis in Japan and Australia, and Qashqai in other markets.</string>
+    <string name="book_now_Button">Book Now</string>
+    <string name="quashqai_name">Nissan Quashqai</string>
 </resources>
