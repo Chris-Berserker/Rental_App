@@ -11,6 +11,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="car_details">Car Details</string>
     <string name="carrex_logo">Carrex Logo</string>
+    <string name="carrex">Carrex</string>
     <!--NavBar Strings-->
     <string name="home_text">Home</string>
     <string name="like_text">Like</string>
