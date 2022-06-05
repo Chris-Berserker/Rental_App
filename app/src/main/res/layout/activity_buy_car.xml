@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/homeback"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:id="@+id/body_container"
     tools:context=".BuyCar">
@@ -19,20 +19,44 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="6dp"
         android:background="@drawable/round_corner"
-        android:elevation="2dp"
         app:itemIconSize="30dp"
         app:itemIconTint="@drawable/item_selector"
         app:itemRippleColor="@android:color/transparent"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/item_menu" />
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="415dp"
+        android:layout_height="wrap_content"
+        android:background="#ccf5ff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_blueham"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/carrex"
+        android:textAlignment="center"
+        android:textColor="@color/CarrexSig"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="wrap_content"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="2dp" />
+        android:layout_below="@+id/toolbar"
+
+        />
 
 </RelativeLayout>

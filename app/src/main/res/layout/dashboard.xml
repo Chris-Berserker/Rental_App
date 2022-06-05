@@ -11,28 +11,18 @@
         android:layout_height="match_parent"
         android:background="#FFFFFF">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@color/lightBlue"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/profilepic" />
+
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="13dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="24dp"
-            android:text="Carrex"
-            android:textSize="30sp"
-            android:textColor="@color/lightBlue"
+            android:layout_marginTop="34dp"
+            android:text="@string/carrex"
+            android:textSize="50sp"
+            android:textColor="#00ccff"
             app:fontFamily="@font/aclonica"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:text="Like it, Book it!"
+            android:text="@string/like_it_book_it"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />

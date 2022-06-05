@@ -22,4 +22,5 @@
     <style name="Theme.SplashScreenAndMore.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.SplashScreenAndMore.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar"/>
 </resources>

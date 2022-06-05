@@ -11,18 +11,16 @@
 
     <TextView
         android:id="@+id/title"
-        android:text="Land Rover"
-        android:textColor="@color/midnightBlue"
-        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
+        android:text="@string/land_rover"
+        android:textAlignment="center"
+        android:textColor="@color/midnightBlue"
         android:textSize="35sp"
-        android:layout_width="500dp"
-        android:layout_height="70dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="1.0"/>
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -32,21 +30,22 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="speedometericon" />
 
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="314dp"
-        android:text="600000 Km"
-        android:textSize="14sp"
-        android:textAlignment="center"
         android:fontFamily="@font/aclonica"
+        android:text="600000 Km"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -63,8 +62,8 @@
 
     <TextView
         android:id="@+id/Petrol"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="314dp"
         android:text="Petrol"
         android:textSize="14sp"
@@ -79,19 +78,20 @@
 
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="260dp"
         android:src="@drawable/engine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="314dp"
         android:text="1600 CC"
         android:textSize="14sp"
@@ -106,53 +106,49 @@
 
 
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="260dp"
         android:src="@drawable/gearbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="314dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/aclonica"
         android:text="Auto"
         android:textAlignment="center"
-        android:textSize="14sp"
-        android:fontFamily="@font/aclonica"
         android:textColor="@color/black"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.029"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.957"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="411dp"
+        android:layout_height="243dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Petrol"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/Petrol">
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:text="Options\nA/C\nABS Brakes\nAirbag\nAlloy Wheels\nAUX\nAudio Bluetooth Telephone Central\nLocking Cruise\nControl Fog Lights                                                            Multifonction Steering Wheel                                Parking Sensor Power Mirrors Power Steering Power Windows Reverse Camera USB Audio"
             android:textColor="@color/black"
-            android:text="Options                                                     A/C                                                            ABS Brakes                                             Airbag                                                  Alloy Wheels                                            AUX
-              Audio Bluetooth Telephone Central                               Locking Cruise         Control Fog Lights                                                            Multifonction Steering Wheel                                Parking Sensor Power Mirrors Power Steering Power Windows Reverse Camera USB Audio"
-            android:textSize="25sp"
-            />
+            android:textSize="25sp" />
     </ScrollView>
 
     <androidx.cardview.widget.CardView
@@ -187,14 +183,14 @@
     <TextView
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginTop="600dp"
+        android:background="@color/dodgerBlue"
         android:fontFamily="@font/aclonica"
         android:text="Rs 1,000,000"
         android:textAlignment="center"
-        android:textSize="20sp"
         android:textColor="@color/white"
-        android:background="@color/dodgerBlue"
-        app:layout_constraintHorizontal_bias="0.114"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -204,7 +200,7 @@
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="600dp"
         android:backgroundTint="@color/midnightBlue"
         android:text="@string/book_now_Button"
         android:textColor="@color/white"
@@ -212,7 +208,7 @@
         android:textStyle="bold"
         app:icon="@drawable/reserv2"
 
-        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
