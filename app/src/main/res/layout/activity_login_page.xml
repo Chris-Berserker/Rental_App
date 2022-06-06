@@ -128,7 +128,7 @@
         android:id="@+id/SignUpbutton"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:backgroundTint="@color/white"
+        android:background="@color/Transparent"
 
         android:text="Sign Up"
         android:textColor="@color/black"

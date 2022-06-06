@@ -37,6 +37,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_blueham"/>
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="51dp"
+        android:layout_height="59dp"
+        android:background="@color/Transparent"
+        android:text=" "
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="500dp"
