@@ -1,6 +1,7 @@
 package com.example.splashscreenandmore;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,17 +10,26 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BuyCar extends AppCompatActivity {
 
     BottomNavigationView navigationView;
     public Button button4;
+    public ImageButton voiceButtonToolbar;
+    public TextView speechTextDisplay;
+    private static final int RECOGNIZER_RESULT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +38,7 @@ public class BuyCar extends AppCompatActivity {
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        //toolbar Hamburger menu... goes to dashboard
         button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -36,6 +47,20 @@ public class BuyCar extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //Toolbar Voice Button
+        voiceButtonToolbar = (ImageButton) findViewById(R.id.voiceButtonToolbar);
+        speechTextDisplay = (TextView) findViewById(R.id.speechTextView);
+        voiceButtonToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent speechIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                speechIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,  RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                speechIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech to Text");
+                startActivityForResult(speechIntent, RECOGNIZER_RESULT);
+            }
+        });
+
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -88,5 +113,18 @@ public class BuyCar extends AppCompatActivity {
             }
         });
 
+    }
+
+    //For Speech Toolbal
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if(requestCode == RECOGNIZER_RESULT && resultCode == RESULT_OK){
+            List<String> matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            speechTextDisplay.setText(matches.get(0).toString());
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
