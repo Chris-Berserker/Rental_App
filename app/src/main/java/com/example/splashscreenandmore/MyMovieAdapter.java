@@ -11,13 +11,19 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class MyMovieAdapter extends RecyclerView.Adapter<MyMovieAdapter.ViewHolder> {
 
+
+    private List<MyCarData> itemList;
     MyCarData[] myMovieData;
     Context context;
 
-    public MyMovieAdapter(MyCarData[] myMovieData, BuyCar activity) {
-        this.myMovieData = myMovieData;
+
+
+    public MyMovieAdapter(List<MyCarData> myMovieData, BuyCar activity) {
+        this.myMovieData = myMovieData.toArray(new MyCarData[0]);
         this.context = activity;
     }
 
@@ -39,20 +45,14 @@ public class MyMovieAdapter extends RecyclerView.Adapter<MyMovieAdapter.ViewHold
         holder.movieImage.setImageResource(myMovieDataList.getMovieImage());
 
         //Display the name at the bottom as a confirmation
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, myMovieDataList.getMovieName(), Toast.LENGTH_SHORT).show();
-
-
-            }
-        });
+        holder.itemView.setOnClickListener(v -> Toast.makeText(context, myMovieDataList.getMovieName(), Toast.LENGTH_SHORT).show());
     }
 
     @Override
     public int getItemCount() {
         return myMovieData.length;
     }
+
 
 
     public class ViewHolder extends RecyclerView.ViewHolder{

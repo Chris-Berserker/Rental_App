@@ -2,6 +2,7 @@ package com.example.splashscreenandmore;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,13 +14,24 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
 public class BuyCar extends AppCompatActivity {
 
+    List<MyCarData> myCarDataList;
     BottomNavigationView navigationView;
     public Button button4;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +39,10 @@ public class BuyCar extends AppCompatActivity {
         setContentView(R.layout.activity_buy_car);
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+
+
 
         button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener(){
@@ -41,6 +57,17 @@ public class BuyCar extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
+
+
+        myCarDataList = new ArrayList<>();
+        myCarDataList.add(new MyCarData("Tesla","Rs 2,840,000","Electric", R.drawable.avenger));
+        myCarDataList.add(new MyCarData("Nissan Qashqai","Rs 1,480,000" ,"1500cc",R.drawable.venom));
+        myCarDataList.add(new MyCarData("Ford Ranger", "Rs 2,400,000","1800cc",R.drawable.jumanji));
+        myCarDataList.add(new MyCarData("Ford Focus", "Rs 1,200,000","1600cc",R.drawable.hulk));
+        myCarDataList.add(new MyCarData("Suzuki", "Rs 500,000","1000cc",R.drawable.good_deeds));
+        myCarDataList.add(new MyCarData("Nissan 350z","Rs 1,950,000" ,"2500cc",R.drawable.avatar));
+
         MyCarData[] myMovieData = new MyCarData[]{
                 new MyCarData("Tesla","Rs 2,840,000","Electric", R.drawable.avenger),
                 new MyCarData("Nissan Qashqai","Rs 1,480,000" ,"1500cc",R.drawable.venom),
@@ -50,7 +77,7 @@ public class BuyCar extends AppCompatActivity {
                 new MyCarData("Nissan 350z","Rs 1,950,000" ,"2500cc",R.drawable.avatar),
         };
 
-        MyMovieAdapter myMovieAdapter = new MyMovieAdapter(myMovieData,BuyCar.this);
+        MyMovieAdapter myMovieAdapter = new MyMovieAdapter(myCarDataList,BuyCar.this);
         recyclerView.setAdapter(myMovieAdapter);
 
         //NavBar Things going on here
@@ -88,5 +115,11 @@ public class BuyCar extends AppCompatActivity {
             }
         });
 
+
     }
+
+
+
+
+
 }
