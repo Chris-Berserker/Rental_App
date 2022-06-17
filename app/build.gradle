@@ -50,5 +50,5 @@ dependencies {
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
     implementation 'com.github.mohammadatif:Animatoo:master'
-
+    implementation 'androidx.biometric:biometric:1.1.0'
 }
