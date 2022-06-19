@@ -25,6 +25,7 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import java.util.Locale;
@@ -39,22 +40,12 @@ public class BuyCar extends AppCompatActivity {
     public TextView speechTextDisplay;
     private static final int RECOGNIZER_RESULT = 1;
 
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy_car);
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-
-
-
-
 
 
         //toolbar Hamburger menu... goes to dashboard
@@ -78,6 +69,7 @@ public class BuyCar extends AppCompatActivity {
                 speechIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,  RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
                 speechIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech to Text");
                 startActivityForResult(speechIntent, RECOGNIZER_RESULT);
+
             }
         });
 
