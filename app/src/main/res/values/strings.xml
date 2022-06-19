@@ -40,4 +40,5 @@
     <string name="like_it_book_it">  Like it, Book it!</string>
     <string name="land_rover">Land Rover</string>
     <string name="voiceoverbutton">VoiceOverButton</string>
+    <string name="title_activity_speech_to_text">SpeechToText</string>
 </resources>

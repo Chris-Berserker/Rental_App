@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.splashscreenandmore">
+    package="com.example.splashscreenandmore" >
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,10 +11,13 @@
         android:label="Carrex"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SplashScreenAndMore">
+        android:theme="@style/Theme.SplashScreenAndMore" >
+        <activity
+            android:name=".SpeechToText"
+            android:exported="true" />
         <activity
             android:name=".Dashboard"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Loading"
             android:exported="true" />
@@ -34,7 +38,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

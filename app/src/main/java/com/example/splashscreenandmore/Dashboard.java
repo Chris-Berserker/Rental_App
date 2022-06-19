@@ -10,6 +10,7 @@ import android.widget.Button;
 
 public class Dashboard extends AppCompatActivity{
     public Button buybutton;
+    public Button speechbutton;
 
 
     @Override
@@ -28,6 +29,16 @@ public class Dashboard extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        speechbutton =(Button) findViewById(R.id.speechBtn);
+        speechbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Dashboard.this, SpeechToText.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

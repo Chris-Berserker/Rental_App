@@ -16,6 +16,8 @@
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/car_displacement_background.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/car_displacement_foreground.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/custom_input.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_baseline_mic_24.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_baseline_mic_off_24.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_simple_shiny.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/rounded.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/roundedbtn1.xml" value="0.1" />
@@ -29,7 +31,9 @@
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_login_page.xml" value="0.22" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_signup_page.xml" value="0.22" />
+        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_speech_to_text.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/content_image_slider.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/dashboard.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/fragment_first.xml" value="0.12" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/fragment_second.xml" value="0.1" />
