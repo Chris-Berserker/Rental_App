@@ -16,8 +16,6 @@
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/car_displacement_background.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/car_displacement_foreground.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/custom_input.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_baseline_mic_24.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_baseline_mic_off_24.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/ic_simple_shiny.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/rounded.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/drawable/roundedbtn1.xml" value="0.1" />
@@ -31,9 +29,7 @@
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_login_page.xml" value="0.22" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_signup_page.xml" value="0.22" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/activity_speech_to_text.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/content_image_slider.xml" value="0.1" />
-        <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/dashboard.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/fragment_first.xml" value="0.12" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Users/admin/Documents/GitHub/Rental_App/app/src/main/res/layout/fragment_second.xml" value="0.1" />
@@ -61,6 +57,7 @@
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_login_page.xml" value="0.192481884057971" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_signup_page.xml" value="0.25" />
+        <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/activity_speech_to_text.xml" value="0.24365942028985507" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/car_item_list.xml" value="0.264" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/content_navigation_side_bar.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/Desktop/App Assignment/SplashScreenAndMore/app/src/main/res/layout/dashboard.xml" value="0.264" />
