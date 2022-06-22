@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class Dashboard extends AppCompatActivity{
+public class Dashboard extends AppCompatActivity {
     public Button buybutton;
-
+    public Button rentbutton;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
 
@@ -21,10 +21,19 @@ public class Dashboard extends AppCompatActivity{
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         buybutton = (Button) findViewById(R.id.buybutton);
-        buybutton.setOnClickListener(new View.OnClickListener(){
+        buybutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 Intent intent = new Intent(Dashboard.this, BuyCar.class);
+                startActivity(intent);
+            }
+        });
+
+        rentbutton = (Button) findViewById(R.id.rentbutton);
+        rentbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard.this, RentCar.class);
                 startActivity(intent);
             }
         });

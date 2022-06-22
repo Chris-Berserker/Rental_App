@@ -3,6 +3,7 @@
     package="com.example.splashscreenandmore">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +24,9 @@
         <activity
             android:name=".BuyCar"
             android:exported="true" />
+        <activity
+            android:name=".RentCar"
+            android:exported="true"/>
         <activity
             android:name=".SignupPage"
             android:exported="false" />
