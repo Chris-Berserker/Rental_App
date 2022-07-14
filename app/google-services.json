@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "386263703559",
+    "project_id": "carrex-1010f",
+    "storage_bucket": "carrex-1010f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386263703559:android:7a830357ed6e13eaca0aa2",
+        "android_client_info": {
+          "package_name": "com.example.splashscreenandmore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386263703559-o9fkv6ndsrbeot8a7bpvn8gcad245618.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjoOjqPuvZJLrfeYBlVzBtfJDd2_JSIbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386263703559-o9fkv6ndsrbeot8a7bpvn8gcad245618.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

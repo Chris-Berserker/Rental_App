@@ -4,17 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupPage">
+    tools:context=".SignupPage"
+    android:background="@drawable/loginscreen">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:background="@drawable/loginscreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
     <ImageView
         android:layout_width="80dp"
@@ -43,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.459" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -67,7 +59,7 @@
         />
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -90,16 +82,16 @@
         app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintWidth_percent=".8" />
 
-    <EditText
-        android:id="@+id/cpassword"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:drawableStart="@drawable/passwordreenter"
         android:drawablePadding="12dp"
         android:textColorHint="@color/black"
-        android:hint="Confirm Password"
+        android:hint="Username"
         android:background="@drawable/custom_input"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -114,7 +106,7 @@
         app:layout_constraintWidth_percent=".8" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/SignUpbutton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
@@ -130,44 +122,37 @@
         app:layout_constraintVertical_bias="0.836"
         app:layout_constraintWidth_percent=".8" />
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/google"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
-        app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="@color/Transparent"
+
+        android:text="Log in"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpbutton"
+        app:layout_constraintVertical_bias="0.377" />
 
     <TextView
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:text="Or Sign Up With:"
-        android:textAlignment="center"
+        android:id="@+id/SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="48dp"
+        android:text="Already Have an Account?"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        app:flow_horizontalBias="1"
+        app:flow_verticalBias="0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932" />
+        app:layout_constraintEnd_toEndOf="@+id/SignUpbutton"
+        app:layout_constraintHorizontal_bias="0.392"
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/fb"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
