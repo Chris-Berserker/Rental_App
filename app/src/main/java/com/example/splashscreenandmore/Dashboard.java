@@ -7,22 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-
-<<<<<<< Updated upstream
-public class Dashboard extends AppCompatActivity {
-    public Button buybutton;
-    public Button rentbutton;
-=======
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Dashboard extends AppCompatActivity{
+
+public class Dashboard extends AppCompatActivity {
     public Button buybutton;
+    public Button rentbutton;
     public Button speechbutton;
     public Button btnLogOut;
     FirebaseAuth mauth;
 
->>>>>>> Stashed changes
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +46,7 @@ public class Dashboard extends AppCompatActivity{
             }
         });
 
-<<<<<<< Updated upstream
-=======
+
         btnLogOut = findViewById(R.id.logoutBtn);
         mauth = FirebaseAuth.getInstance();
 
@@ -61,7 +56,7 @@ public class Dashboard extends AppCompatActivity{
         });
 
 
->>>>>>> Stashed changes
+
     }
 
     @Override
