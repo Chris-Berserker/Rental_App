@@ -55,7 +55,7 @@ public class Dashboard extends AppCompatActivity {
             startActivity(new Intent(Dashboard.this, LoginPage.class));
         });
 
-
+        mauth = FirebaseAuth.getInstance();
 
     }
 

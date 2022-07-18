@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
 
@@ -21,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_TIME_OUT);
+
+
     }
+
+
+
 
 }

@@ -70,6 +70,7 @@ public class SignupPage extends AppCompatActivity {
             etRegUsername.setError("Username cannot be empty");
             etRegUsername.requestFocus();
         } else {
+
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
