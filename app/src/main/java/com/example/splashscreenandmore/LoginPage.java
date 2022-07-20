@@ -73,7 +73,7 @@ public class LoginPage extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(LoginPage.this, "User log in successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginPage.this, Dashboard.class));
+                        startActivity(new Intent(LoginPage.this, FingerPrintAuthentication.class));
                     }else{
                         Toast.makeText(LoginPage.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
