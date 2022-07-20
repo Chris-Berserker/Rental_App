@@ -40,9 +40,11 @@ public class FingerPrintAuthentication extends AppCompatActivity {
                 break;
             case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
                 Toast.makeText(this, "Fingerprint Sensor not exists", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(FingerPrintAuthentication.this, Dashboard.class));
                 break;
             case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
                 Toast.makeText(this, "Fingerprint Sensor not available", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(FingerPrintAuthentication.this, Dashboard.class));
                 break;
             case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
                 // Prompts the user to create credentials that your app accepts.
