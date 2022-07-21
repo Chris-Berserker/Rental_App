@@ -21,6 +21,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_blueham" />
 
+
+    <android.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="-77dp">
+
+    </android.widget.SearchView>
+
     <Button
         android:id="@+id/button4"
         android:layout_width="54dp"

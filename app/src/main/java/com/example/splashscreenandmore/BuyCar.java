@@ -11,6 +11,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -83,5 +84,39 @@ public class BuyCar extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         buyCarAdapter.stopListening();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        getMenuInflater().inflate(R.menu.search, menu);
+        MenuItem item = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                txtSearch(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+                txtSearch(query);
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    private void txtSearch(String str){
+        FirebaseRecyclerOptions<BuyCarGetter> options =
+                new FirebaseRecyclerOptions.Builder<BuyCarGetter>()
+                        .setQuery(query.orderByChild("make").startAt(str).endAt(str+"~"), BuyCarGetter.class)
+                        .build();
+
+        buyCarAdapter = new BuyCarAdapter(options);
+        buyCarAdapter.startListening();
+        recyclerView.setAdapter(buyCarAdapter);
     }
 }

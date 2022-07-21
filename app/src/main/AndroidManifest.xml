@@ -27,7 +27,8 @@
             android:exported="true" />
         <activity
             android:name=".BuyCar"
-            android:exported="true" />
+            android:exported="true"
+          />
         <activity
             android:name=".RentCar"
             android:exported="true" />
