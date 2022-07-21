@@ -2,30 +2,26 @@ package com.example.splashscreenandmore;
 
 public class BuyCarGetter {
 
-    String price, make, model, millage, engineCapacity, type, img;
-    int year;
+    String img, make, millage, model, price;
 
-    BuyCarGetter(){
+    BuyCarGetter() {
 
     }
 
-    public BuyCarGetter(String price, String make, String model, String millage, String engineCapacity, String type, String img, int year) {
-        this.price = price;
-        this.make = make;
-        this.model = model;
-        this.millage = millage;
-        this.engineCapacity = engineCapacity;
-        this.type = type;
+    public BuyCarGetter(String img, String make, String millage, String model, String price) {
         this.img = img;
-        this.year = year;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
+        this.make = make;
+        this.millage = millage;
+        this.model = model;
         this.price = price;
+
+    }
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getMake() {
@@ -36,14 +32,6 @@ public class BuyCarGetter {
         this.make = make;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public String getMillage() {
         return millage;
     }
@@ -52,35 +40,21 @@ public class BuyCarGetter {
         this.millage = millage;
     }
 
-    public String getEngineCapacity() {
-        return engineCapacity;
+    public String getModel() {
+        return model;
     }
 
-    public void setEngineCapacity(String engineCapacity) {
-        this.engineCapacity = engineCapacity;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public String getType() {
-        return type;
+
+    public String getPrice() {
+        return price;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
+    public void setPrice(String price) {
+        this.price = price;
     }
 }
+
