@@ -57,16 +57,15 @@ public class Dashboard extends AppCompatActivity {
             startActivity(new Intent(Dashboard.this, LoginPage.class));
         });
 
-        mauth = FirebaseAuth.getInstance();
 
     }
 
     @Override
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
-        FirebaseUser user= mauth.getCurrentUser();
-        if(user==null){
-            startActivity(new Intent(Dashboard.this, LoginPage.class));
+        FirebaseUser user = mauth.getCurrentUser();
+        if (user == null) {
+            startActivity(new Intent(Dashboard.this, FirstPageActivity.class));
         }
     }
 
