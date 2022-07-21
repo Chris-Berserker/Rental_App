@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent"
@@ -22,16 +23,7 @@
         app:navigationIcon="@drawable/ic_blueham" />
 
 
-    <android.widget.SearchView
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignEnd="@+id/title"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="-77dp">
 
-    </android.widget.SearchView>
 
     <Button
         android:id="@+id/button4"
@@ -42,7 +34,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title1"
         android:layout_width="222dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/toolbar"

@@ -50,6 +50,7 @@ public class BuyCar extends AppCompatActivity {
 
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getActionBar();
 
 
         //recyclerView here
@@ -113,13 +114,16 @@ public class BuyCar extends AppCompatActivity {
     }
 
     private void txtSearch(String str){
+        try{
         FirebaseRecyclerOptions<BuyCarGetter> options =
                 new FirebaseRecyclerOptions.Builder<BuyCarGetter>()
-                        .setQuery(query.orderByChild("make").startAt(str).endAt(str+"~"), BuyCarGetter.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Vehicles").orderByChild("make").startAt(str).endAt(str+"~"), BuyCarGetter.class)
                         .build();
 
         buyCarAdapter = new BuyCarAdapter(options);
         buyCarAdapter.startListening();
-        recyclerView.setAdapter(buyCarAdapter);
+        recyclerView.setAdapter(buyCarAdapter);}catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
