@@ -13,6 +13,8 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class BuyCarAdapter extends FirebaseRecyclerAdapter<BuyCarGetter, BuyCarAdapter.myViewHolder> {
 
     /**
@@ -28,13 +30,12 @@ public class BuyCarAdapter extends FirebaseRecyclerAdapter<BuyCarGetter, BuyCarA
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull BuyCarGetter model) {
 
-        final ImageView img;
         try{
         Glide.with(holder.img.getContext())
                 .load(model.getImg())
-                .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                .placeholder(R.drawable.carload)
                 .centerCrop()
-                .placeholder(R.drawable.common_google_signin_btn_icon_dark_normal)
+                .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);}catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,13 +54,13 @@ public class BuyCarAdapter extends FirebaseRecyclerAdapter<BuyCarGetter, BuyCarA
 
     class myViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView img;
+        CircleImageView img;
         TextView price, make, model, millage;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            img = (ImageView) itemView.findViewById(R.id.imageView);
+            img = (CircleImageView) itemView.findViewById(R.id.imageview);
             make = (TextView) itemView.findViewById(R.id.maketx);
             millage = (TextView) itemView.findViewById(R.id.millagetx);
             model = (TextView) itemView.findViewById(R.id.modeltx);

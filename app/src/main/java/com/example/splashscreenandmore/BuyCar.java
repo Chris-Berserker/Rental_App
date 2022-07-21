@@ -17,11 +17,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.FirebaseDatabase;
@@ -48,6 +50,7 @@ public class BuyCar extends AppCompatActivity {
 
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         //recyclerView here
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
