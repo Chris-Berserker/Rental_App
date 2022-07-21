@@ -17,8 +17,8 @@
     <color name="LightBlue">#b2d7e6</color>
     <!--Custom Colors-->
     <color name="light_white">#D2D2D2</color>
-    <color name="card_1">#A3E4D7</color>
-    <color name="card_2">#F9E79F</color>
+    <color name="card_1">#008EFF</color>
+    <color name="card_2">#F80658</color>
     <color name="card_3">#D7BDE2</color>
     <color name="card_4">#D2C3D8</color>
     <color name="homeback">#68828a</color>

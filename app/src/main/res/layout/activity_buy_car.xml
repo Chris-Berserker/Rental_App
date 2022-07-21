@@ -9,23 +9,6 @@
     android:id="@+id/body_container"
     tools:context=".BuyCar">
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="@color/white"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@drawable/item_selector"
-        app:itemRippleColor="@android:color/transparent"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/item_menu" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="415dp"
@@ -38,16 +21,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_blueham" />
 
-
-
     <Button
         android:id="@+id/button4"
         android:layout_width="54dp"
         android:layout_height="wrap_content"
-        android:background="@color/Transparent"
         android:layout_marginBottom="8dp"
+        android:background="@color/Transparent"
         tools:ignore="SpeakableTextPresentCheck" />
-
 
     <TextView
         android:id="@+id/title"
@@ -74,32 +54,6 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottom_navigation"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginBottom="0dp" />
-
-    <ImageButton
-        android:id="@+id/voiceButtonToolbar"
-        android:layout_width="43dp"
-        android:layout_height="43dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/rounded_microphone_toolbar"
-        android:contentDescription="@string/voiceoverbutton"
-        app:srcCompat="@drawable/ic_keyboard_voice_blue"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/speechTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="63dp"
-        android:text="TextView" />
+        android:layout_below="@+id/toolbar"/>
 
 </RelativeLayout>
