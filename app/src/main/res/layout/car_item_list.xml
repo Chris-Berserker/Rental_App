@@ -38,20 +38,20 @@
             android:id="@+id/modeltx"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imageview"
             android:layout_below="@+id/maketx"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@+id/imageview"
             android:text="Car Model"
             android:textColor="@color/card_1"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/millagetx"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imageview"
             android:layout_below="@+id/modeltx"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@+id/imageview"
             android:text="Millage"
             android:textColor="@color/card_1"
             android:textSize="15dp"

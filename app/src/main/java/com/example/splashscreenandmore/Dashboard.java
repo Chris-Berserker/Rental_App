@@ -18,6 +18,7 @@ public class Dashboard extends AppCompatActivity {
     public Button rentbutton;
     public Button speechbutton;
     public Button btnLogOut;
+    public Button sellCar;
     FirebaseAuth mauth;
 
 
@@ -29,6 +30,15 @@ public class Dashboard extends AppCompatActivity {
 
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        sellCar = (Button)findViewById(R.id.sellcar);
+        sellCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard.this, SellCar.class);
+                startActivity(intent);
+            }
+        });
 
         buybutton = (Button) findViewById(R.id.buybutton);
         buybutton.setOnClickListener(new View.OnClickListener() {

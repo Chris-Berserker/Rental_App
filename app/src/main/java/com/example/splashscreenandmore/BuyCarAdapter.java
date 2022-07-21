@@ -27,12 +27,14 @@ public class BuyCarAdapter extends FirebaseRecyclerAdapter<BuyCarGetter, BuyCarA
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull BuyCarGetter model) {
+
+        final ImageView img;
         try{
         Glide.with(holder.img.getContext())
                 .load(model.getImg())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
-                .circleCrop()
-                .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                .centerCrop()
+                .placeholder(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);}catch (Exception e) {
             e.printStackTrace();
         }

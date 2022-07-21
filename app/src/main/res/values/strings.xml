@@ -41,4 +41,21 @@
     <string name="land_rover">Land Rover</string>
     <string name="voiceoverbutton">VoiceOverButton</string>
     <string name="blank" />
+    <string name="done_and_confirm">Done and Confirm</string>
+    <string name="engine_power_horse_power">Engine Power (Horse Power)</string>
+    <string name="distance_travelled_in_vehicle_kms">Distance travelled in Vehicle(KMs)</string>
+    <string name="url_image_of_vehicle">URL Image Of Vehicle</string>
+    <string name="model_of_vehicle">Model Of Vehicle</string>
+    <string name="price_of_vehicle">Price of Vehicle</string>
+    <string name="make_brand_name_of_the_vehicle">Make(Brand Name) Of the vehicle</string>
+
+    <array name="make">
+        <item>Nissan</item>
+        <item>Toyota</item>
+        <item>Alfa Romeo</item>
+        <item>Aston Martin</item>
+
+
+    </array>
+
 </resources>
