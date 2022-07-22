@@ -11,6 +11,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,11 +24,17 @@ import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.alan.alansdk.Alan;
+import com.alan.alansdk.AlanConfig;
+import com.alan.alansdk.button.AlanButton;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -42,6 +49,9 @@ public class BuyCar extends AppCompatActivity {
     BuyCarAdapter buyCarAdapter;
     Query query = FirebaseDatabase.getInstance().getReference().child("Vehicles");
 
+    /// Add the alanButton variable
+    private AlanButton alanButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +61,13 @@ public class BuyCar extends AppCompatActivity {
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getActionBar();
+
+        /// Set up the Alan button
+        AlanConfig config = AlanConfig.builder().setProjectId("b81624a63de800883191a70c51ef58d82e956eca572e1d8b807a3e2338fdd0dc/stage").build();
+        alanButton = findViewById(R.id.alan_button);
+        alanButton.initWithConfig(config);
+        //Commands for Alan
+        setVisualState();
 
 
         //recyclerView here
@@ -76,6 +93,20 @@ public class BuyCar extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    //command for Alan showing it it's the buying screen
+    void setVisualState() {
+        JSONObject params = new JSONObject();
+        try {
+            params.put("screen","buy");
+        } catch (JSONException e) {
+            Log.e("AlanButton", e.getMessage());
+        }
+        alanButton.setVisualState(params.toString());
+    }
+
+    public static void enableLogging(){
+        Alan.enableLogging(true);
     }
 
     @Override

@@ -5,6 +5,7 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url 'https://jitpack.io' }
         mavenCentral() // Warning: this repository is going to shut down soon
+        jcenter()
     }
 }
 rootProject.name = "SplashScreenAndMore"
