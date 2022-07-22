@@ -33,6 +33,16 @@
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <com.alan.alansdk.button.AlanButton
+        android:id="@+id/alan_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="visible"
+        app:button_horizontal_align="right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="222dp"
