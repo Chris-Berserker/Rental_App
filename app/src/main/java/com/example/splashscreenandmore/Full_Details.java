@@ -1,22 +1,34 @@
 package com.example.splashscreenandmore;;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Bundle;
-
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class Full_Details extends AppCompatActivity {
 
+
+    TextView carTitle;
     private ImageSlider imageSlider;
+
+    DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +54,35 @@ public class Full_Details extends AppCompatActivity {
         //we didnt add INTERNET permission in Manifest :)
 
         //Thanks for watvhing the video, Keep sharing and subscribe the channel :)
+/*
+        ref= FirebaseDatabase.getInstance().getReference().child("Vehicles");
+        carTitle.findViewById(R.id.speedo);
 
+        String VehiclesKey = getIntent().getStringExtra("VehiclesKey");
+
+        ref.child(VehiclesKey).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    String model = dataSnapshot.child("model").getValue().toString();
+
+                    carTitle.setText(model);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+*/
 
     }
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+       startActivity(new Intent(Full_Details.this,BuyCar.class));
+    }
+
 }

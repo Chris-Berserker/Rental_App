@@ -67,6 +67,8 @@ public class BuyCar extends AppCompatActivity {
         recyclerView.setAdapter(buyCarAdapter);
 
 
+
+
         //toolbar Hamburger menu... goes to dashboard
         button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener(){
@@ -89,6 +91,7 @@ public class BuyCar extends AppCompatActivity {
         super.onStop();
         buyCarAdapter.stopListening();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
@@ -126,4 +129,5 @@ public class BuyCar extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 }

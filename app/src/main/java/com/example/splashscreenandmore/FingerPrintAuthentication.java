@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.Button;
@@ -64,6 +65,7 @@ public class FingerPrintAuthentication extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                                 "Authentication error: " + errString, Toast.LENGTH_SHORT)
                         .show();
+                startActivity(new Intent(FingerPrintAuthentication.this, Loading.class));
             }
 
             @Override
@@ -94,9 +96,18 @@ public class FingerPrintAuthentication extends AppCompatActivity {
         // Consider integrating with the keystore to unlock cryptographic operations,
         // if needed by your app.
 
+        /*
         imageViewLogin.setOnClickListener(view -> {
             biometricPrompt.authenticate(promptInfo);
         });
+*/
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                imageViewLogin.performClick();
+                biometricPrompt.authenticate(promptInfo);
+            }
+        }, 2);
     }
 
 }

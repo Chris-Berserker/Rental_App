@@ -10,17 +10,17 @@
     >
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/carTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
-        android:text="@string/land_rover"
         android:textAlignment="center"
         android:textColor="@color/midnightBlue"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -34,6 +34,7 @@
         android:contentDescription="speedometericon" />
 
     <TextView
+        android:id="@+id/speedo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="314dp"
@@ -50,14 +51,15 @@
 
 
     <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="260dp"
         android:src="@drawable/fuel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -175,7 +177,9 @@
                 app:iss_delay="1000"
                 app:iss_period="1000"
                 app:iss_title_background="@drawable/gradient"
-                tools:ignore="MissingClass" />
+                tools:ignore="MissingClass" >
+
+            </com.denzcoskun.imageslider.ImageSlider>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -212,6 +216,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
