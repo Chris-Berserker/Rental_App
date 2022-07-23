@@ -18,15 +18,24 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.alan.alansdk.AlanCallback;
+import com.alan.alansdk.AlanConfig;
+import com.alan.alansdk.button.AlanButton;
 import android.widget.Toast;
 
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.alan.alansdk.AlanConfig;
+import com.alan.alansdk.button.AlanButton;
+import com.alan.alansdk.events.EventCommand;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -40,8 +49,8 @@ public class RentCar extends AppCompatActivity {
     List<MyCarData> myCarDataList;
     BottomNavigationView navigationView;
     public Button button4;
-    public ImageButton voiceButtonToolbar;
     public TextView speechTextDisplay;
+    private AlanButton alanButton;
     private static final int RECOGNIZER_RESULT = 1;
 
 
@@ -52,7 +61,37 @@ public class RentCar extends AppCompatActivity {
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        /// Set up the Alan button
+        AlanConfig config = AlanConfig.builder().setProjectId("e1d15f29fb2cb2f3af195200e275302d2e956eca572e1d8b807a3e2338fdd0dc/stage").build();
+        alanButton = findViewById(R.id.alan_button);
+        alanButton.initWithConfig(config);
+        //Commands for Alan
+        setVisualState();
 
+        AlanCallback alanCallback = new AlanCallback() {
+            /// Handle commands from Alan Studio
+            @Override
+            public void onCommand(final EventCommand eventCommand) {
+                try {
+                    JSONObject command = eventCommand.getData();
+                    String commandName = command.getJSONObject("data").getString("command");
+                    switch(commandName) {
+                        case "navigateToDash":
+                            Intent intent = new Intent(RentCar.this, Dashboard.class);
+                            startActivity(intent);
+                            break;
+
+
+                    }
+                    //Log.d("AlanButton", "onCommand: commandName: " + commandName);
+                } catch (JSONException e) {
+                    Log.e("AlanButton", e.getMessage());
+                }
+            }
+        };
+
+        /// Register callbacks
+        alanButton.registerCallback(alanCallback);
 
         //toolbar Hamburger menu... goes to dashboard
 
@@ -65,19 +104,7 @@ public class RentCar extends AppCompatActivity {
             }
         });
 
-        //Toolbar Voice Button
-        voiceButtonToolbar = (ImageButton) findViewById(R.id.voiceButtonToolbar);
 
-        voiceButtonToolbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent speechIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-                speechIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,  RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                speechIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech to Text");
-                startActivityForResult(speechIntent, RECOGNIZER_RESULT);
-
-            }
-        });
 
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
@@ -106,26 +133,22 @@ public class RentCar extends AppCompatActivity {
         recyclerView.setAdapter(myMovieAdapter);
     }
 
+    //command for Alan showing it it's the renting screen
+    void setVisualState() {
+        JSONObject params = new JSONObject();
+        try {
+            params.put("screen","rent");
+        } catch (JSONException e) {
+            Log.e("AlanButton", e.getMessage());
+        }
+        alanButton.setVisualState(params.toString());
+    }
+
+
     @Override
     protected void onStart() {
         super.onStart();
     }
-
-
-    //For Speech Toolbal
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
-        if(requestCode == RECOGNIZER_RESULT && resultCode == RESULT_OK){
-            List<String> matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            speechTextDisplay.setText(matches.get(0).toString());
-        }
-
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-
 }
 
 
