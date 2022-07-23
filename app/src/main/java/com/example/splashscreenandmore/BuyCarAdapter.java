@@ -33,7 +33,7 @@ public class BuyCarAdapter extends FirebaseRecyclerAdapter<BuyCarGetter, BuyCarA
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull BuyCarGetter model) {
+    protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull BuyCarGetter model) {
 
         try{
             Glide.with(holder.img.getContext())

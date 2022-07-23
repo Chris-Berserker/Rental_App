@@ -71,11 +71,13 @@ public class SellCar extends AppCompatActivity {
 
     private void insertData(){
         Map<String,Object> map = new HashMap<>();
+        if(!priceText.getText().toString().equals("") || !modelText.getText().toString().equals("") || !makeText.getText().toString().equals("")){
         map.put("price", priceText.getText().toString());
         map.put("model", modelText.getText().toString());
         map.put("img", imgText.getText().toString());
         map.put("make", makeText.getText().toString());
         map.put("millage", millageText.getText().toString());
+        }
 
         FirebaseDatabase.getInstance().getReference().child("Vehicles").push()
                 .setValue(map)
@@ -120,9 +122,8 @@ public class SellCar extends AppCompatActivity {
                 JSONObject command = eventCommand.getData();
                 String commandName = command.getJSONObject("data").getString("command");
                 Log.d("AlanButton", "onCommand: commandName: " + commandName);
-                if ("navigation".equals(commandName)) {
-                    Intent intent = new Intent(SellCar.this, Dashboard.class);
-                    startActivity(intent);
+                if ("priceText".equals(commandName)) {
+                    priceText.setText("data");
                 }else if("writing".equals(commandName)){
                     priceText.setText(commandName);
                 }

@@ -31,7 +31,7 @@ public class Dashboard extends AppCompatActivity {
         //Hides the status bar
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        sellCar = (Button)findViewById(R.id.sellcar);
+        sellCar = (Button)findViewById(R    .id.sellcar);
         sellCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
