@@ -41,11 +41,11 @@ public class Full_Details extends AppCompatActivity {
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add(new SlideModel("https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://c4.wallpaperflare.com/wallpaper/946/379/721/artwork-landscape-mountains-forest-wallpaper-preview.jpg", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://c4.wallpaperflare.com/wallpaper/846/616/937/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://c4.wallpaperflare.com/wallpaper/816/451/655/sphere-art-artwork-1980s-wallpaper-preview.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://cdn.motor1.com/images/mgl/6EEZG/s1/2015-6098442015-mitsubishi-lancer-evolution-final-edition1.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://hips.hearstapps.com/roa.h-cdn.co/assets/16/37/1474040762-2016-lancer-evolution-fe-18.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://i.ytimg.com/vi/6aaILbw0Oxk/maxresdefault.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://tdrpmimages.azureedge.net/photos/import/202206/2519/5309/c9f1ccb5-a800-4b29-95b5-4e9d7ef162a3.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://visor.ph/wp-content/uploads/2021/08/EVO-X-MAIN4.jpg", ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 
@@ -56,7 +56,7 @@ public class Full_Details extends AppCompatActivity {
         //Thanks for watvhing the video, Keep sharing and subscribe the channel :)
 /*
         ref= FirebaseDatabase.getInstance().getReference().child("Vehicles");
-        carTitle.findViewById(R.id.speedo);
+        carTitle.findViewById(R.id.carTitle);
 
         String VehiclesKey = getIntent().getStringExtra("VehiclesKey");
 
@@ -76,8 +76,8 @@ public class Full_Details extends AppCompatActivity {
             }
         });
 
-*/
 
+*/
     }
     @Override
     public void onBackPressed() {
