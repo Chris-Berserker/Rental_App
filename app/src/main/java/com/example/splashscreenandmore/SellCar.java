@@ -121,11 +121,18 @@ public class SellCar extends AppCompatActivity {
             try {
                 JSONObject command = eventCommand.getData();
                 String commandName = command.getJSONObject("data").getString("command");
+                String commandText = command.getJSONObject("data").getString("value");
                 Log.d("AlanButton", "onCommand: commandName: " + commandName);
                 if ("priceText".equals(commandName)) {
-                    priceText.setText("data");
-                }else if("writing".equals(commandName)){
-                    priceText.setText(commandName);
+                    priceText.setText(commandText);
+                }else if("getMake".equals(commandName)){
+                    makeText.setText(commandText);
+                }else if("getModel".equals(commandName)){
+                    modelText.setText(commandText);
+                }else if("getMillage".equals(commandName)){
+                    millageText.setText(commandText);
+                }else if(!priceText.equals("")&&!modelText.equals("")&&!makeText.equals("")&&!millageText.equals("")){
+                    Toast.makeText(SellCar.this, "For Image of vehicle URL you have to input it manually", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Log.d("AlanButton", "Unknown event");

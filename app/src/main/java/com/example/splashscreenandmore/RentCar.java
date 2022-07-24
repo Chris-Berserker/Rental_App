@@ -23,10 +23,14 @@ import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.alan.alansdk.button.AlanButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -43,6 +47,7 @@ public class RentCar extends AppCompatActivity {
     public ImageButton voiceButtonToolbar;
     public TextView speechTextDisplay;
     private static final int RECOGNIZER_RESULT = 1;
+    private AlanButton alanButton;
 
 
     @Override
@@ -53,6 +58,11 @@ public class RentCar extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
+
+        //setting Alan
+        alanButton = findViewById(R.id.alan_button);
+        //Calling Alan
+        setVisualState();
 
         //toolbar Hamburger menu... goes to dashboard
 
@@ -104,6 +114,17 @@ public class RentCar extends AppCompatActivity {
 
         MyMovieAdapter myMovieAdapter = new MyMovieAdapter(myCarDataList,RentCar.this);
         recyclerView.setAdapter(myMovieAdapter);
+    }
+
+    //command for Alan showing it's the rent screen
+    void setVisualState() {
+        JSONObject params = new JSONObject();
+        try {
+            params.put("screen","rent");
+        } catch (JSONException e) {
+            Log.e("AlanButton", e.getMessage());
+        }
+        alanButton.setVisualState(params.toString());
     }
 
     @Override
