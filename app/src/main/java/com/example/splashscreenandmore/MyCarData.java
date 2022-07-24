@@ -3,44 +3,58 @@ package com.example.splashscreenandmore;
 
 public class MyCarData {
 
-    private String movieName;
-    private String movieDate;
-    private Integer movieImage;
-    private String listingPrice;
+    private String car_name;
+    private String car_rent_price;
+    private String car_type;
+    private String img;
 
-    public MyCarData(String movieName, String listingPrice, String movieDate, Integer movieImage) {
-        this.movieName = movieName;
-        this.listingPrice = listingPrice;
-        this.movieDate = movieDate;
-        this.movieImage = movieImage;
+    public MyCarData(String car_name, String car_rent_price, String car_type, String img) {
+        this.car_name = car_name;
+        this.car_rent_price = car_rent_price;
+        this.car_type = car_type;
+        this.img = img;
     }
 
-    public String getMovieName() {
-        return movieName;
+    public String getCar_name() {
+        return car_name;
     }
 
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
+    public void setCar_name(String car_name) {
+        this.car_name = car_name;
     }
 
-    public String getListingPrice(){return listingPrice;}
-
-    public void setListingPrice(String listingPrice){this.listingPrice = listingPrice;}
-
-    public String getMovieDate() {
-        return movieDate;
+    public String getCar_rent_price() {
+        return car_rent_price;
     }
 
-    public void setMovieDate(String movieDate) {
-        this.movieDate = movieDate;
+    public void setCar_rent_price(String car_rent_price) {
+        this.car_rent_price = car_rent_price;
     }
 
-    public Integer getMovieImage() {
-        return movieImage;
+    public String getCar_type() {
+        return car_type;
     }
 
-    public void setMovieImage(Integer movieImage) {
-        this.movieImage = movieImage;
+    public void setCar_type(String car_type) {
+        this.car_type = car_type;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    @Override
+    public String toString() {
+        return "MyCarData{" +
+                "car_name='" + car_name + '\'' +
+                ", car_rent_price='" + car_rent_price + '\'' +
+                ", car_type='" + car_type + '\'' +
+                ", img='" + img + '\'' +
+                '}';
     }
 }
 
