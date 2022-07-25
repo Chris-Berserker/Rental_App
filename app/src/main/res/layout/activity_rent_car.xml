@@ -1,506 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".RentCar">
+    android:layout_height="match_parent"
+    android:id="@+id/body_container"
+    tools:context=".BuyCar">
 
-    <RelativeLayout
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="415dp"
+        android:layout_height="wrap_content"
+        android:background="#ccf5ff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_blueham" />
+
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:background="@color/Transparent"
+        android:layout_marginBottom="8dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/carrex"
+        android:textAlignment="center"
+        android:textColor="@color/CarrexSig"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:id="@+id/RelLay1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="415dp"
-                android:layout_height="wrap_content"
-                android:background="#ccf5ff"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:navigationIcon="@drawable/ic_blueham" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="51dp"
-                android:layout_height="59dp"
-                android:background="@color/Transparent"
-                android:text="@string/blank"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="500dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aclonica"
-                android:text="@string/carrex"
-                android:textAlignment="center"
-                android:textColor="@color/CarrexSig"
-                android:textSize="35sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.50"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="60dp"
-                android:layout_height="58dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="7dp"
-                app:srcCompat="@drawable/carloadd"
-                android:contentDescription="TODO" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/RelLay2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/RelLay1">
-
-            <EditText
-                android:id="@+id/editComment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="2dp"
-                android:ems="10"
-                android:hint="Search car"
-                android:inputType="textPersonName" />
-
-            <Button
-                android:id="@+id/micImg"
-                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_toRightOf="@+id/editComment"
-                app:icon="@drawable/ic_mic"
-                app:iconTint="@color/CarrexSig"
-                app:strokeColor="@color/CarrexSig" />
-
-
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editComment"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radio_button_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Luxury Car" />
-
-                <RadioButton
-                    android:id="@+id/radio_button_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Family Car" />
-
-                <RadioButton
-                    android:id="@+id/radio_button_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Campervan" />
-
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/text3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="Available Near You"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text3"
-
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="With Driver"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text3"
-                android:layout_alignParentEnd="true"
-                android:layout_marginVertical="10dp"
-                android:layout_marginTop="10dp" />
-
-
-        </RelativeLayout>
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/RelLay2"
-            android:alignmentMode="alignMargins"
-            android:columnCount="1"
-            android:columnOrderPreserved="false"
-            android:rowCount="4">
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/img1"
-                        android:layout_width="120dp"
-                        android:layout_height="95dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="20dp"
-                        android:src="@drawable/avenger" />
-
-                    <TextView
-
-                        android:id="@+id/txt1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
-                        android:text="Tesla"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txt1"
-                        android:layout_marginLeft="150dp"
-                        android:hint="Rs 7732/Day"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/txt2"
-                        android:layout_marginLeft="150dp"
-                        android:backgroundTint="@color/white"
-                        android:src="@drawable/ic_right_arrow" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:orientation="horizontal"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="78dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="20dp"
-                        android:src="@drawable/venom" />
-
-                    <TextView
-                        android:id="@+id/txt3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
-                        android:text="Nissan Qashqai"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txt3"
-                        android:layout_marginLeft="150dp"
-                        android:hint="Rs 4029/Day"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/txt4"
-                        android:layout_marginLeft="150dp"
-                        android:backgroundTint="@color/white"
-                        android:src="@drawable/ic_right_arrow" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="78dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="20dp"
-                        android:src="@drawable/jumanji" />
-
-                    <TextView
-
-                        android:id="@+id/txt5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
-                        android:text="Ford Ranger"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txt5"
-                        android:layout_marginLeft="150dp"
-                        android:hint="Rs 6534/Day"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/txt6"
-                        android:layout_marginLeft="150dp"
-                        android:backgroundTint="@color/white"
-                        android:src="@drawable/ic_right_arrow" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:background="@color/white"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="78dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="20dp"
-                        android:src="@drawable/good_deeds" />
-
-                    <TextView
-                        android:id="@+id/txt7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
-                        android:text="Suzuki"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txt7"
-                        android:layout_marginLeft="150dp"
-                        android:hint="Rs 1361/Day"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/txt8"
-                        android:layout_marginLeft="150dp"
-                        android:backgroundTint="@color/white"
-                        android:src="@drawable/ic_right_arrow" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/white"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="78dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="20dp"
-                        android:src="@drawable/hulk" />
-
-                    <TextView
-                        android:id="@+id/txt9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
-                        android:text="Ford Focus"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txt9"
-                        android:layout_marginLeft="150dp"
-                        android:hint="Rs 3267/Day"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/txt10"
-                        android:layout_marginLeft="150dp"
-                        android:backgroundTint="@color/white"
-                        android:src="@drawable/ic_right_arrow" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/white"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="78dp"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="20dp"
-                        android:src="@drawable/avatar" />
-
-                    <TextView
-                        android:id="@+id/txt11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
-                        android:layout_marginTop="12dp"
-                        android:text="Nissan 350z"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txt11"
-                        android:layout_marginLeft="150dp"
-                        android:hint="Rs 5300/Day"
-                        android:textColor="#6f6f6f"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/txt12"
-                        android:layout_marginLeft="150dp"
-                        android:backgroundTint="@color/white"
-                        android:src="@drawable/ic_right_arrow" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </GridLayout>
-
-    </RelativeLayout>
-
-
-</ScrollView>
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="0dp" />
+
+    <com.alan.alansdk.button.AlanButton
+        android:id="@+id/alan_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="658dp"
+        android:layout_marginEnd="0dp"
+        android:visibility="visible"
+        app:button_horizontal_align="right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/voiceButtonToolbar"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_microphone_toolbar"
+        android:contentDescription="@string/voiceoverbutton"
+        app:srcCompat="@drawable/ic_keyboard_voice_blue"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+</RelativeLayout>
