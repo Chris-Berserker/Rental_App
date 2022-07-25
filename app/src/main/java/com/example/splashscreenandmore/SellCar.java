@@ -71,28 +71,33 @@ public class SellCar extends AppCompatActivity {
 
     private void insertData(){
         Map<String,Object> map = new HashMap<>();
-        if(!priceText.getText().toString().equals("") || !modelText.getText().toString().equals("") || !makeText.getText().toString().equals("")){
+        if(!priceText.getText().toString().equals("") && !modelText.getText().toString().equals("") && !makeText.getText().toString().equals("") && !millageText.getText().toString().equals("")){
         map.put("price", priceText.getText().toString());
         map.put("model", modelText.getText().toString());
         map.put("img", imgText.getText().toString());
         map.put("make", makeText.getText().toString());
         map.put("millage", millageText.getText().toString());
         }
+        if (!map.isEmpty()) {
 
-        FirebaseDatabase.getInstance().getReference().child("Vehicles").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(SellCar.this, "Data Has Been Registered", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(Exception e) {
-                        Toast.makeText(SellCar.this, "Error Registering Data", Toast.LENGTH_SHORT).show();
-                    }
-                });
+
+            FirebaseDatabase.getInstance().getReference().child("Vehicles").push()
+                    .setValue(map)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(SellCar.this, "Data Has Been Registered", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(Exception e) {
+                            Toast.makeText(SellCar.this, "Error Registering Data", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }else{
+            Toast.makeText(SellCar.this, "Error Registering Data", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void clearAll(){
