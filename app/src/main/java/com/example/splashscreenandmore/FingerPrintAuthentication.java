@@ -45,7 +45,7 @@ public class FingerPrintAuthentication extends AppCompatActivity {
                 break;
             case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
                 Toast.makeText(this, "Fingerprint Sensor not available", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(FingerPrintAuthentication.this, Dashboard.class));
+                startActivity(new Intent(FingerPrintAuthentication.this, LoginPage.class));
                 break;
             case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
                 // Prompts the user to create credentials that your app accepts.
@@ -55,6 +55,7 @@ public class FingerPrintAuthentication extends AppCompatActivity {
                 startActivityForResult(enrollIntent, REQUEST_CODE);
                 break;
         }
+
         executor = ContextCompat.getMainExecutor(this);
         biometricPrompt = new BiometricPrompt(FingerPrintAuthentication.this,
                 executor, new BiometricPrompt.AuthenticationCallback() {
@@ -65,13 +66,13 @@ public class FingerPrintAuthentication extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                                 "Authentication error: " + errString, Toast.LENGTH_SHORT)
                         .show();
-                startActivity(new Intent(FingerPrintAuthentication.this, Loading.class));
+                startActivity(new Intent(FingerPrintAuthentication.this, LoginPage.class));
             }
 
             @Override
             public void onAuthenticationSucceeded(
                     @NonNull BiometricPrompt.AuthenticationResult result) {
-                super.onAuthenticationSucceeded(result);
+                //super.onAuthenticationSucceeded(result);
                 startActivity(new Intent(FingerPrintAuthentication.this,Loading.class));
                 Toast.makeText(getApplicationContext(),
                         "Authentication succeeded!", Toast.LENGTH_SHORT).show();

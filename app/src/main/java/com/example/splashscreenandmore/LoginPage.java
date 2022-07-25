@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
@@ -23,6 +24,7 @@ public class LoginPage extends AppCompatActivity {
     public Button signupbutton;
     TextInputEditText etLoginEmail;
     TextInputEditText etLoginPassword;
+    public ImageButton fingerprint;
 
     FirebaseAuth mAuth;
 
@@ -54,6 +56,11 @@ public class LoginPage extends AppCompatActivity {
             loginUser();
         });
 
+        fingerprint = findViewById(R.id.fingerprint_icon);
+        fingerprint.setOnClickListener(view ->{
+            startActivity(new Intent(LoginPage.this,FingerPrintAuthentication.class));
+        });
+
     }
 
     private void loginUser(){
@@ -73,7 +80,7 @@ public class LoginPage extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(LoginPage.this, "User log in successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginPage.this, FingerPrintAuthentication.class));
+                        startActivity(new Intent(LoginPage.this, Loading.class));
                     }else{
                         Toast.makeText(LoginPage.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
