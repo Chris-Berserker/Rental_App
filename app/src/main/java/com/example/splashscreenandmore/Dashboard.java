@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Dashboard extends AppCompatActivity {
     public Button buybutton;
     public Button rentbutton;
-    public Button speechbutton;
+    public Button contactb;
     public Button btnLogOut;
     public Button sellCar;
     FirebaseAuth mauth;
@@ -36,6 +36,15 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Dashboard.this, SellCar.class);
+                startActivity(intent);
+            }
+        });
+
+        contactb = (Button) findViewById(R.id.contactbt);
+        contactb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard.this, ContactPage.class);
                 startActivity(intent);
             }
         });

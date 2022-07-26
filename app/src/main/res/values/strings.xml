@@ -48,6 +48,9 @@
     <string name="model_of_vehicle">Model Of Vehicle</string>
     <string name="price_of_vehicle">Price of Vehicle</string>
     <string name="make_brand_name_of_the_vehicle">Make(Brand Name) Of the vehicle</string>
+    <string name="umar_mechanics_5945_8186_n_ngarage_navauto_5941_3206_n_nsaleem_mechanic_workshop_5253_1651_n_nvishal_auto_services_5776_2893_n_nnadeem_mechanic_5251_5513_n_ngarage_serally_ltd_5498_0103_n_nnathan_mechanix_5494_7955_n_ncaudan_mechanics_centre_5255_5226_n_ngarage_nasser_amp_bros_5817_0810_n_ngarage_ghostrider_5707_0599_n_nendy_mechanics_5938_5979_n_nintermechanic_ltd_5749_4231"><![CDATA[Umar Mechanics : 5945 8186\n\nGarage Navauto : 5941 3206\n\nSALEEM MECHANIC WORKSHOP : 5253 1651\n\nVishal Auto Services : 5776 2893\n\nNadeem Mechanic : 5251 5513\n\nGarage Serally Ltd : 5498 0103\n\nNathan Mechanix : 5494 7955\n\nCaudan Mechanics Centre : 5255 5226\n\nGarage Nasser & Bros : 5817 0810\n\nGarage Ghostrider : 5707 0599\n\nEndy Mechanics : 5938 5979\n\nIntermechanic LTD : 5749 4231]]></string>
+    <string name="here_s_a_list_of_our_most_trusted_mechanics">Here\'s a list of our most trusted mechanics :)</string>
+    <string name="mechanic_details">MECHANIC DETAILS</string>
 
     <array name="make">
         <item>Nissan</item>
