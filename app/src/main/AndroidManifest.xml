@@ -20,6 +20,9 @@
             android:name=".Dashboard"
             android:exported="true" />
         <activity
+            android:name=".ContactPage"
+            android:exported="false" />
+        <activity
             android:name=".Loading"
             android:exported="true" />
         <activity

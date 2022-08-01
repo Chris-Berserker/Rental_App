@@ -71,28 +71,33 @@ public class SellCar extends AppCompatActivity {
 
     private void insertData(){
         Map<String,Object> map = new HashMap<>();
-        if(!priceText.getText().toString().equals("") || !modelText.getText().toString().equals("") || !makeText.getText().toString().equals("")){
+        if(!priceText.getText().toString().equals("") && !modelText.getText().toString().equals("") && !makeText.getText().toString().equals("") && !millageText.getText().toString().equals("")){
         map.put("price", priceText.getText().toString());
         map.put("model", modelText.getText().toString());
         map.put("img", imgText.getText().toString());
         map.put("make", makeText.getText().toString());
         map.put("millage", millageText.getText().toString());
         }
+        if (!map.isEmpty()) {
 
-        FirebaseDatabase.getInstance().getReference().child("Vehicles").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(SellCar.this, "Data Has Been Registered", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(Exception e) {
-                        Toast.makeText(SellCar.this, "Error Registering Data", Toast.LENGTH_SHORT).show();
-                    }
-                });
+
+            FirebaseDatabase.getInstance().getReference().child("Vehicles").push()
+                    .setValue(map)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(SellCar.this, "Data Has Been Registered", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(Exception e) {
+                            Toast.makeText(SellCar.this, "Error Registering Data", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }else{
+            Toast.makeText(SellCar.this, "Error Registering Data", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void clearAll(){
@@ -121,11 +126,18 @@ public class SellCar extends AppCompatActivity {
             try {
                 JSONObject command = eventCommand.getData();
                 String commandName = command.getJSONObject("data").getString("command");
+                String commandText = command.getJSONObject("data").getString("value");
                 Log.d("AlanButton", "onCommand: commandName: " + commandName);
                 if ("priceText".equals(commandName)) {
-                    priceText.setText("data");
-                }else if("writing".equals(commandName)){
-                    priceText.setText(commandName);
+                    priceText.setText(commandText);
+                }else if("getMake".equals(commandName)){
+                    makeText.setText(commandText);
+                }else if("getModel".equals(commandName)){
+                    modelText.setText(commandText);
+                }else if("getMillage".equals(commandName)){
+                    millageText.setText(commandText);
+                }else if(!priceText.equals("")&&!modelText.equals("")&&!makeText.equals("")&&!millageText.equals("")){
+                    Toast.makeText(SellCar.this, "For Image of vehicle URL you have to input it manually", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Log.d("AlanButton", "Unknown event");
