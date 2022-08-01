@@ -24,19 +24,18 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Full_Details extends AppCompatActivity {
+public class Full_Details_2 extends AppCompatActivity {
 
 
     TextView carTitle;
     private ImageSlider imageSlider;
     public Button button4;
-
     DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_full_details);
+        setContentView(R.layout.activity_full_details_2);
 
         imageSlider = findViewById(R.id.imageSlider);
 
@@ -51,6 +50,14 @@ public class Full_Details extends AppCompatActivity {
         slideModels.add(new SlideModel("https://visor.ph/wp-content/uploads/2021/08/EVO-X-MAIN4.jpg", ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+
+        button4 = (Button) findViewById(R.id.button3);
+        button4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Car has been booked!",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // I have some imageurls which i will use in this slider.
 
@@ -80,21 +87,12 @@ public class Full_Details extends AppCompatActivity {
         });
 
 
-
-
 */
-        button4 = (Button) findViewById(R.id.button3);
-        button4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Car has been booked!",Toast.LENGTH_SHORT).show();
-            }
-        });
     }
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
-       startActivity(new Intent(Full_Details.this,BuyCar.class));
+        startActivity(new Intent(Full_Details_2.this,RentCar.class));
     }
 
 }

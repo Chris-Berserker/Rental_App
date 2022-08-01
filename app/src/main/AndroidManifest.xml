@@ -29,6 +29,9 @@
             android:name=".Full_Details"
             android:exported="true" />
         <activity
+            android:name=".Full_Details_2"
+            android:exported="true" />
+        <activity
             android:name=".BuyCar"
             android:exported="true"/>
         <activity

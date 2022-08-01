@@ -1,6 +1,7 @@
 package com.example.splashscreenandmore;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,17 @@ public class RentCarAdapter extends RecyclerView.Adapter<RentCarAdapter.ViewHold
                 .asBitmap()
                 .load(myCarData.get(position).getImg())
                 .into(holder.img);
+
+        holder.v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(v.getContext(), Full_Details_2.class);
+
+                v.getContext().startActivity(myIntent);
+
+
+            }
+        });
     }
 
     @Override
@@ -57,12 +69,14 @@ public class RentCarAdapter extends RecyclerView.Adapter<RentCarAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView car_name,car_rent_price,car_type;
         private ImageView img;
+        public View v;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             car_name = itemView.findViewById(R.id.textName);
             car_rent_price = itemView.findViewById(R.id.text);
             car_type = itemView.findViewById(R.id.textdate);
             img = itemView.findViewById(R.id.imageview);
+            v = itemView;
         }
     }
 
