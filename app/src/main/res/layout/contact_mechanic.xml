@@ -31,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="30dp"
                 android:text="@string/mechanic_details"
-                android:textColor="#1B5E20"
+                android:textColor="@color/card_2"
                 android:textSize="24sp"
                 app:fontFamily="@font/aclonica" />
 
@@ -55,9 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/umar_mechanics_5945_8186_n_ngarage_navauto_5941_3206_n_nsaleem_mechanic_workshop_5253_1651_n_nvishal_auto_services_5776_2893_n_nnadeem_mechanic_5251_5513_n_ngarage_serally_ltd_5498_0103_n_nnathan_mechanix_5494_7955_n_ncaudan_mechanics_centre_5255_5226_n_ngarage_nasser_amp_bros_5817_0810_n_ngarage_ghostrider_5707_0599_n_nendy_mechanics_5938_5979_n_nintermechanic_ltd_5749_4231"
-            android:textColor="@color/white"
+            android:textColor="#FFEB3B"
             app:fontFamily="@font/aclonica"
-            android:textSize="17sp" />
+            android:textSize="20sp" />
     </ScrollView>
 
     <TextView
@@ -66,8 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="@string/here_s_a_list_of_our_most_trusted_mechanics"
-        android:textColor="@color/lightBlue"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:fontFamily="@font/aclonica"
         app:layout_constraintEnd_toEndOf="parent"
